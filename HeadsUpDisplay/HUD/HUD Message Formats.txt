@@ -1,0 +1,42 @@
+=================
+UDP MESSAGES
+=================
+Locations and distances are in ft, but that can be changed.
+Orientations are in Degrees CW. 
+Bearing To Target is in Degrees CW.
+The Orientation for the Target command is the Robots desired orientation at the target.
+Angle brackets represent where values need to be substituted, they are not part of the command.
+Values are string representations of a number (floating point or integer) - I use String.fprintf("%g").
+Time strings are displayed as is, not parsed to a number.
+Spaces are fine but not necessary.
+Uppercase may also be used.
+Messages remain on the screen until overwritten or the clearmsgs command is sent.
+
+target, <x>, <y>, <orientation>          (defines target for path calculation)
+calculate, <x>, <y>, <orientation>       (places robot and calculates a path)
+position, <x>, <y>, <orientation>        (places robot)
+time, <string label e.g. "match">, <time as string>      (displayed at upper left)
+robotstate, <string>                                     (displayed at upper right)
+clearmsgs                                (clears upper left and upper right messages)
+window                                   (toggles between HUD and video window)
+zoom                                     (toggles zoom display of HUD path)
+iconify                                  (iconifies the window)
+maximize                                 (maximizes the window)
+theme                                    (toggles the theme between light and dark)
+vision, <distance>, <bearing>            (for future pilot view of target approach)
+
+===============
+KEYBOARD
+===============
+Z = zoom toggle
+B = toggle background (playfield) on and off
+F = flip display between mirrored and not
+W = toggle between HUD and video windows
+M = toggle between maximized and not (cannot do iconify here)
+T = switch between light and dark background themes
+D = toggle demo mode on and off
+
+===============
+PREFERENCES
+===============
+These are documented as comments in the settings.ini file
